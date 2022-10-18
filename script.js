@@ -60,15 +60,15 @@ form.addEventListener('submit', (event) => {
 });
 
 bPrev.addEventListener('click', () => {
-    searchPokemon -=1
-    renderPokemon(searchPokemon);
+    if (searchPokemon >1 ){
+        searchPokemon -=1
+        renderPokemon(searchPokemon);
+    }
 });
 
 bNext.addEventListener('click', () => {
-    if (searchPokemon >1 ){
         searchPokemon +=1
         renderPokemon(searchPokemon);
-    }
 });
 
 renderPokemon(searchPokemon);
